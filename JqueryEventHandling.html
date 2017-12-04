@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery Event Handling</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  	$(document).ready(function () {
+ 
+    $('#show').click(function () {
+    $('#watch').show('slow');
+    });
+
+    $('#hide').click(function () {
+    $('#watch').hide('normal');
+    });
+
+    var i = 15;
+
+    $("#myBtn").click(function () {
+        if (i >= 0) {
+            i++;
+            var b = $("#myText").css({"color": "yellow", "font-size": i});
+
+            }
+    });
+    });
+  </script>
+  <style type="text/css">
+  	.preloader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+
+    
+    }
+  </style>
+</head>
+<body>
+<p></p>
+<div class="container"></div>
+<div class="jumbotron"></div>
+<div class="btn btn-lg btn-info" id="show">Show</div>
+<div class="btn btn-lg btn-success" id="hide">Hide</div>
+<div class="btn btn-lg btn-warning" id="myBtn">Font Size and Color</div>
+
+<p></p>
+<div id="watch" class="jumbotron alert-info">
+  <h2>Click The Buttons Above and Watch Me!</h2>
+</div>
+
+<div id="myText" class="jumbotron alert-info">
+  <h2>Click The Buttons Above and Watch Me!</h2>
+</div>
+
+
+<div class="preloader"></div>
+	
+</body>
+</html>
